@@ -24,9 +24,9 @@ export const auth = (prisma: PrismaService, configService: ConfigService) =>
         enabled: !!configService.getOrThrow('GOOGLE_CLIENT_ID'),
       },
       github: {
-        clientId: configService.getOrThrow('GOOGLE_CLIENT_ID'),
-        clientSecret: configService.getOrThrow('GOOGLE_CLIENT_SECRET'),
-        enabled: !!configService.getOrThrow('GOOGLE_CLIENT_ID'),
+        clientId: configService.getOrThrow('GITHUB_CLIENT_ID'),
+        clientSecret: configService.getOrThrow('GITHUB_CLIENT_SECRET'),
+        enabled: !!configService.getOrThrow('GITHUB_CLIENT_ID'),
       },
     },
     user: {
