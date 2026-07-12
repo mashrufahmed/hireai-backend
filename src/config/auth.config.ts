@@ -17,6 +17,18 @@ export const auth = (prisma: PrismaService, configService: ConfigService) =>
     emailAndPassword: {
       enabled: true,
     },
+    socialProviders: {
+      google: {
+        clientId: configService.getOrThrow('GOOGLE_CLIENT_ID'),
+        clientSecret: configService.getOrThrow('GOOGLE_CLIENT_SECRET'),
+        enabled: !!configService.getOrThrow('GOOGLE_CLIENT_ID'),
+      },
+      github: {
+        clientId: configService.getOrThrow('GOOGLE_CLIENT_ID'),
+        clientSecret: configService.getOrThrow('GOOGLE_CLIENT_SECRET'),
+        enabled: !!configService.getOrThrow('GOOGLE_CLIENT_ID'),
+      },
+    },
     user: {
       additionalFields: {
         role: {

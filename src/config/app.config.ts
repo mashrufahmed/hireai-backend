@@ -18,12 +18,17 @@ export const validationSchema = Joi.object({
 
   // Database
   DATABASE_URL: Joi.string().required(),
+  DIRECT_URL: Joi.string().required(),
 
   // Better Auth
   BETTER_AUTH_SECRET: Joi.string().min(32).required(),
-
   BETTER_AUTH_URL: Joi.string().uri().required(),
 
+  GOOGLE_CLIENT_ID: Joi.string(),
+  GOOGLE_CLIENT_SECRET: Joi.string(),
+
+  GITHUB_CLIENT_ID: Joi.string(),
+  GITHUB_CLIENT_SECRET: Joi.string(),
   // RabbitMQ
   RABBITMQ_URI: Joi.string().required(),
 
